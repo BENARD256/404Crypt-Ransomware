@@ -11,6 +11,8 @@ YouTube Tutorial: https://www.youtube.com/
 > <h5><br><br>The1% shall not assume any responsibility for Misuse or Damage Caused by the Program</h5>
 
 <h5>Run the RSA_KEY_PAIR file to generate Asymmetric Keys Required For Key Encrpytion</h5>
+> <h5>Consider Changing the Email Specified in the Encrypt.py Init Method Because after encryption the Encryption key i sent to the attacker Via Email</h5>
+
 <h4>For the Decryption to Take Place Place the Key On the Desktop of The Target System so as to Decrypt The Files</h4>
 
 <h4>Files tha Make-up the Ransomware</h4>
@@ -58,6 +60,6 @@ YouTube Tutorial: https://www.youtube.com/
     <ol>
     <h5>This is Decryption System File  </h5>
     <h4>This is Derived as Child Class of Malicious class in the Encrypt.py Module</h4>
-    <h4>Once the Unencrypted Authentic AES key symmetric.pem File is placed in the Current Directory as the Decrypt.py File</h4>
+    <h4>Once the Unencrypted Authentic AES key symmetric.pem File is placed On the Desktop of the Target Machine the Decrypt.py File</h4>
     <h4>All Encrypted Files Will Be Decrypted </h4>
     </ol>
