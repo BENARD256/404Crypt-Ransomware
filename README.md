@@ -10,7 +10,8 @@ YouTube Tutorial: https://www.youtube.com/
 > <h5><br><br>Misuse or Illegal Usage of the Tool One will Be solely Be held Responsible for not Obeying Federal & State Laws</h5>
 > <h5><br><br>The1% shall not assume any responsibility for Misuse or Damage Caused by the Program</h5>
 
-
+<h4>Run the RSA_KEY_PAIR file to generate Asymmetric Keys Required For Key Encrpytion</h4>
+<h4>For the Decryption to Take Place Place the Key On the Desktop of The Target System so as to Decrypt The Files
 <h4>Files tha Make-up the Ransomware</h4>
 <li><b>Ransom_Note.py</b></li>
     <ol>
